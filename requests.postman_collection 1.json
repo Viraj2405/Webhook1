@@ -1,0 +1,4886 @@
+{
+	"info": {
+		"_postman_id": "321fa676-8efa-419a-b649-24af7bc5b6ad",
+		"name": "requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27702824"
+	},
+	"item": [
+		{
+			"name": "Authinticate",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "https://bhushan.bugdazz.com/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"sachin.bhosale@securelayer7.net\",\n\t\"password\":\"test\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/login1",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"login1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Outlook SIgn in",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"accessToken\":\"eyJ0eXAiOiJKV1QiLCJub25jZSI6IkM0Snlkb1JTbjVFNFlCZEhJdGVkQzFUSER6akxkTU5Kb2g4Y1Zjb3VvOFkiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyIsImtpZCI6Im5PbzNaRHJPRFhFSzFqS1doWHNsSFJfS1hFZyJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDAiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9kMTQyYzAyYS04MjVkLTQyMjctYTQ4Yy1mZjQ1OGVjNjk4MDgvIiwiaWF0IjoxNjE5NzYxMjAyLCJuYmYiOjE2MTk3NjEyMDIsImV4cCI6MTYxOTc2NTEwMiwiYWNjdCI6MCwiYWNyIjoiMSIsImFjcnMiOlsidXJuOnVzZXI6cmVnaXN0ZXJzZWN1cml0eWluZm8iLCJ1cm46bWljcm9zb2Z0OnJlcTEiLCJ1cm46bWljcm9zb2Z0OnJlcTIiLCJ1cm46bWljcm9zb2Z0OnJlcTMiLCJjMSIsImMyIiwiYzMiLCJjNCIsImM1IiwiYzYiLCJjNyIsImM4IiwiYzkiLCJjMTAiLCJjMTEiLCJjMTIiLCJjMTMiLCJjMTQiLCJjMTUiLCJjMTYiLCJjMTciLCJjMTgiLCJjMTkiLCJjMjAiLCJjMjEiLCJjMjIiLCJjMjMiLCJjMjQiLCJjMjUiXSwiYWlvIjoiRTJaZ1lNaU12RlE3eWE1UnVsem4zbUhIa2kreVdvOEx5aFovWmxaSXZybmRNVXAzMzM4QSIsImFtciI6WyJwd2QiXSwiYXBwX2Rpc3BsYXluYW1lIjoiU2VjdXJlTGF5ZXI3IiwiYXBwaWQiOiJhZDc4OGFlOS1iYTc4LTQ5MmItYjJkMC02NTMzZjA4MWJjMTMiLCJhcHBpZGFjciI6IjAiLCJmYW1pbHlfbmFtZSI6IkJob3NhbGUiLCJnaXZlbl9uYW1lIjoiU2FjaGluIiwiaWR0eXAiOiJ1c2VyIiwiaXBhZGRyIjoiNDUuMjUyLjc0LjEzNCIsIm5hbWUiOiJTYWNoaW4gQmhvc2FsZSIsIm9pZCI6IjgxYTExODZkLTAwZWUtNGQxYS04Y2FiLWIxNTdhNTliNTRlZCIsInBsYXRmIjoiMyIsInB1aWQiOiIxMDAzMjAwMEI2NzgxMUE4IiwicHdkX2V4cCI6IjEwNTAwMzIiLCJwd2RfdXJsIjoiaHR0cHM6Ly9wb3J0YWwubWljcm9zb2Z0b25saW5lLmNvbS9DaGFuZ2VQYXNzd29yZC5hc3B4IiwicmgiOiIwLkFUNEFLc0JDMFYyQ0owS2tqUDlGanNhWUNPbUtlSzE0dWl0SnN0QmxNX0NCdkJNLUFEZy4iLCJzY3AiOiJDYWxlbmRhcnMuUmVhZCBvcGVuaWQgcHJvZmlsZSBVc2VyLlJlYWQgZW1haWwiLCJzaWduaW5fc3RhdGUiOlsia21zaSJdLCJzdWIiOiJralBKVW5SRjJhUTNMNzlZM19HRGJESUgzSUtvaWV1cGxITE1qaS1SNEI0IiwidGVuYW50X3JlZ2lvbl9zY29wZSI6IkFTIiwidGlkIjoiZDE0MmMwMmEtODI1ZC00MjI3LWE0OGMtZmY0NThlYzY5ODA4IiwidW5pcXVlX25hbWUiOiJzYWNoaW4uYmhvc2FsZUBzZWN1cmVsYXllcjcubmV0IiwidXBuIjoic2FjaGluLmJob3NhbGVAc2VjdXJlbGF5ZXI3Lm5ldCIsInV0aSI6IlpFUC1PZXRqX0Vtd2d2bTNkbWhBQVEiLCJ2ZXIiOiIxLjAiLCJ4bXNfc3QiOnsic3ViIjoiS3I2bmVZekJCVHVWdEdETGtfRlA2NDJ3OW5GalBQMUkxOVVZWEJLcC13ZyJ9LCJ4bXNfdGNkdCI6MTU2MDIzMzYxN30.eY-gW65UXZzODtty_pyC8e4AEGSXBwcMIPqjAnbpDRH52zmRq5sGrPIVOKzEO5fm5BjmieVKeoI4v6sA6De91LR6jQKNf8_EQsRdfrMzViTsjAgUHiF6zazY5k9zfMpEoIMTmh1iCN0uzRzdssUF6kcw3RNVKVukSuNGql1h2cvTJjU6x1zLCsgWrKBTxAzT4W8n6AV9W5dbG_sPG0ajYxc_DGCO56qnaqK8JqVvKmhcrO33l04KaWHfrvwo6VLGJ7AtB51I-5P2aHZcdl_fxpEvn83UU1XnmJcX6a8OxSjPGJW2uYzHi-C1shvr_MRkt8AqmMWVfMQr1vbTyzJUxw\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/signin",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{ base_url  }}/logout",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login with Email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.io/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"sachin.b@yopmail.com\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/signin/email",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"signin",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify email login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"token\":\"$2y$10$fBmXm.cQrKNFA/7cYhoTau8foa3Xl5lOIxew5/VlO5lZvxUsPLCga\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/loginverify/",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"loginverify",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Alias",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.com/"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/checkalias",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"checkalias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"password\":\"restsnfjd\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/register",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Master",
+			"item": [
+				{
+					"name": "Add DB config",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"dbHost\":\"localhost\",\n\t\"dbName\":\"custnewdb\",\n\t\"dbUserName\":\"root\",\n\t\"dbPassword\":\"abc\",\n\t\"customerId\":1\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/savedb?=",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"savedb"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Vendor\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/role/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"role",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Role",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/roles/602ccb1e3114f7600b55aa04",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"roles",
+								"602ccb1e3114f7600b55aa04"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Penetestingtype",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"test new\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/penetestingtype/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"penetestingtype",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get PeneTestingType",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/penetestingtypes",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"penetestingtypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Penetestingtype",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"test Update\",\n\t\"status\" : \"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/penetestingtype/5ebbbf00475d0000dd000c22",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"penetestingtype",
+								"5ebbbf00475d0000dd000c22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Skillset",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"skill new\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/skillset/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"skillset",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Tool",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"tool new\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/tool/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"tool",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Reference",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"url\":\"Reference new\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/reference/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"reference",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Testingtype",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"testtype new\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/testingtype/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"testingtype",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Weakness",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Weakness new\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/weaknes/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"weaknes",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Cresponse",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"cresponse new\",\n\t\"description\":\"test description\",\n\t\"type\":{\"type_name\": \"Vulnerability Description\",\"_id\": \"5ebcd74b72630000f8000b62\"},\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/cresponse/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"cresponse",
+								"create"
+							]
+						},
+						"description": "This API is use for add data into common response table this is a master table."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Skillsets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/skillsets",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"skillsets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Skill set",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"skill update\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/skillset/5ebbe544475d0000dd000c24",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"skillset",
+								"5ebbe544475d0000dd000c24"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tools",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/tools/5ebbee3a475d0000dd000c25",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"tools",
+								"5ebbee3a475d0000dd000c25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tool",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"tool Update\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/tool/5ebbee3a475d0000dd000c25",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"tool",
+								"5ebbee3a475d0000dd000c25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Reference",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"url\":\"Reference Update\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/reference/5ebbf0d7475d0000dd000c26",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"reference",
+								"5ebbf0d7475d0000dd000c26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Reference",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/references/5ebbf0d7475d0000dd000c26",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"references",
+								"5ebbf0d7475d0000dd000c26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Testing Type",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Testingtype Update\",\n\t\"status\": \"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/testingtype/5ebbf32c475d0000dd000c27",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"testingtype",
+								"5ebbf32c475d0000dd000c27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Testing Types",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/testingtypes",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"testingtypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weakness",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.io"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/weakness",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"weakness"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Weaknesses",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Weakness Update\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/weaknes/5ebbf67e475d0000dd000c28",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"weaknes",
+								"5ebbf67e475d0000dd000c28"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Cresponse Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Security Risk\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/cresponsetype/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"cresponsetype",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cresponse",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/cresponses/5ebcd96b72630000f8000b63",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"cresponses",
+								"5ebcd96b72630000f8000b63"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cresponse",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"cresponse new\",\n\t\"description\":\"test description\",\n\t\"type\":{\"type_name\": \"Security Risk\",\"_id\": \"5ebcda7b72630000f8000b64\"},\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/cresponse/5ebcd96b72630000f8000b63",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"cresponse",
+								"5ebcd96b72630000f8000b63"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Menu",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Scope Documentation\",\n\t\"title\":\"Scope Documentation\",\n\t\"url\":\"scopeDocumentation\",\n\t\"parentID\":\"5f6c4f098237000057003063\",\n\t\"status\":\"1\",\n\t\"visibility\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/menu/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"menu",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Menus",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/menus",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"menus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Menu",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Assign Vendor\",\n\t\"title\":\"Assign Vendor\",\n\t\"url\":\"assignVendor\",\n\t\"parentID\":\"\",\n\t\"status\":\"1\",\n\t\"visibility\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/menu/5f12bccb91410000bc006b12",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"menu",
+								"5f12bccb91410000bc006b12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cresponse Type",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/cresponsetypes",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"cresponsetypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cresponse Type",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Security Risk\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/cresponsetype/5ebcda7b72630000f8000b64",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"cresponsetype",
+								"5ebcda7b72630000f8000b64"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menu Search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"keyword\":\"user\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/menus/search",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"menus",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cresponse Search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"keyword\":\"test\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/cresponses/search",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"cresponses",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cresponse Type Search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"keyword\":\"Security\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/cresponsetypes/search",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"cresponsetypes",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Weekness Search ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"keyword\":\"Weakness\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/weakness/search",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"weakness",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Testing type  search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"keyword\":\"type\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/testingtypes/search",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"testingtypes",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "References search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"keyword\":\"ref\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/references/search",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"references",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tool Search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"keyword\":\"tool\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/tools/search",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"tools",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Skill set search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"keyword\":\"new\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/skillsets/search",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"skillsets",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Penitesting type search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"keyword\":\"new\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/penetestingtypes/search",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"penetestingtypes",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Role Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/roles/search?keyword=test&page=1",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"roles",
+								"search"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "test"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Role",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Admin2\",\n  \"status\":1,\n\t\"permissions\":[{\"dashboard\":[\"ADD\"],\"project\":[\"EDIT\"],\"assignVendor\":[],\"phase\":[],\"scopeTitle\":[],\"engagementType\":[],\"scopeUrl\":[],\"testingMethod\":[],\"module\":[],\"assignPhase\":[],\"assignResource\":[],\"scopeDetails\":[],\"asvsConfiguration\":[],\"asvsScopeLevel\":[],\"scopeDocumentation\":[],\"vulnerability\":[\"ADD\",\"VIEW\"],\"customer\":[],\"profile\":[\"ADD\",\"EDIT\",\"VIEW\"],\"plan\":[],\"role\":[],\"organization\":[],\"invitevendor\":[]}]\n}\n"
+						},
+						"url": {
+							"raw": "{{ base_url }}/role/5f731222f70e000076003c32",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"role",
+								"5f731222f70e000076003c32"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer Module",
+			"item": [
+				{
+					"name": "Add Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://bugdazzstage.bugdazz.com"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Anudeep\",\n\t\"lastName\":\"Patel\",\n\t\"email\":\"lohit.ab@arisglobal.com\",\n\t\"jobTitle\":\"Developer\",\n\t\"mobileNo\":\"122345678\",\n\t\"organization\":\"5ece6ec7be0b00001c001e92\",\n\t\"role\":\"5f6c4ea38237000057003062\",\n\t\"mobileExt\":\"+91\"\n\t\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/customer/create?step=onboard",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"customer",
+								"create"
+							],
+							"query": [
+								{
+									"key": "step",
+									"value": "onboard"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://bhushan.bugdazz.io"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/customers/60783a7cd17e0b1d960fb9e2?=",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"customers",
+								"60783a7cd17e0b1d960fb9e2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"tempRole\",\n\t\"status\":\"1\",\n\t\"permissions\":{\"dashboard\":[\"VIEW\"],\"project\":[\"ADD\",\"EDIT\",\"VIEW\"],\"report\":[\"ADD\",\"EDIT\",\"VIEW\"],\"scope\":[\"ADD\",\"EDIT\",\"VIEW\"],\"role\":[\"VIEW\",\"ADD\",\"EDIT\"],\"customer\":[\"VIEW\",\"ADD\",\"EDIT\"],\"organization\":[\"VIEW\",\"ADD\",\"EDIT\"],\"plan\":[\"VIEW\"],\"menumaster\":[\"VIEW\",\"ADD\",\"EDIT\"]}\n}\n\n"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/role/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"role",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Roles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.io/"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/roles/5f8ae3a06379381ed24ddba4",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"roles",
+								"5f8ae3a06379381ed24ddba4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Roles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Admin\",\n\t\"status\":\"1\",\n\t\"permissions\":{\"dashboard\":[\"VIEW\"],\"project\":[\"ADD\",\"EDIT\",\"VIEW\"],\"report\":[\"ADD\",\"EDIT\",\"VIEW\"],\"scope\":[\"ADD\",\"EDIT\",\"VIEW\"],\"role\":[\"VIEW\",\"ADD\",\"EDIT\"],\"customer\":[\"VIEW\",\"ADD\",\"EDIT\"],\"organization\":[\"VIEW\",\"ADD\",\"EDIT\"],\"plan\":[\"VIEW\"],\"menumaster\":[\"VIEW\",\"ADD\",\"EDIT\"],\"invitevendor\":[\"VIEW\",\"ADD\",\"EDIT\"]}\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/role/5f2019f8bb3b0000f3003192",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"role",
+								"5f2019f8bb3b0000f3003192"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							},
+							{
+								"key": "Origin",
+								"value": "http://securelayer7.bugdazz.com"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"designation\": \"Dev\",\n\"email\": \"sachin.bhosale@securelayer7.net\",\n\"firstName\": \"Sachin\",\n\"lastName\": \"Bhosale\",\n\"role\": \"5f8ae3a06379381ed24ddba4\",\n\"timeZone\": \"Asia/Kolkata\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/customer/6033e29827a5f824497541d2",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"customer",
+								"6033e29827a5f824497541d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Echonomic\",\n\t\"status\":\"1\",\n\t\"permissions\":{\"USER_LIMIT\":[\"Allowed Users\",\"1\"],\"PROJECT_LIMIT\":[\"Allowed Project\",\"3\"],\"PROJECT_MANAGER\":[\"Dedicated Project Manager\",\"YES\"],\"ANALYTICS\":[\"Dashboard Analytics\",\"YES\"],\"PDF_REPORT\":[\"Export PDF Report\",\"YES\"],\"RESULT\":[\"Result Real Time\",\"YES\"],\"VULNERABILITY\":[\"Vulnerability\",\"YES\"],\"TESTING\":[\"Remeditation Testing\",\"YES\"]},\n\t\"price\":\"1000\",\n\t\"currency\":\"INR\"\n}\n"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/plan/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"plan",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Plans",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/plans/5f0ef6418d2f00008a001de2",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"plans",
+								"5f0ef6418d2f00008a001de2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Organization",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"sbidemo\",\n\t\"url\":\"https://sbidemo.bugdazz.io\",\n\t\"alias\":\"sbidemo\",\n\t\"type\":\"subscriber\",\n\t\"location\":\"cloud\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/organization/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"organization",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Organization",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.com/"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/organizations?page=1",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"organizations"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Organization",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"sbidemo\",\n\t\"url\":\"https://sbidemo.bugdazz.io\",\n\t\"alias\":\"sbidemo\",\n\t\"type\":\"subscriber\",\n\t\"location\":\"cloud\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/organization/5f804e76ca49c072b34b00e6",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"organization",
+								"5f804e76ca49c072b34b00e6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Region",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"regionName\":\"Pune\",\n\t\"host\":\"localhost\",\n\t\"dbUserName\":\"madmin\",\n\t\"dbPassword\":\"fY!TMUuoN&G4roG\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/region/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"region",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Region",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/regions/5f85a27ae04dee3cbb1bed42",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"regions",
+								"5f85a27ae04dee3cbb1bed42"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Region",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"regionName\":\"Mumbai\",\n\t\"host\":\"localhost\",\n\t\"dbUserName\":\"madmin\",\n\t\"dbPassword\":\"fY!TMUuoN&G4roG\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/region/5ecf6ba8296e000014006e94",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"region",
+								"5ecf6ba8296e000014006e94"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add customer to organization",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Sachin\",\n\t\"lastName\":\"Bhosale\",\n\t\"email\":\"sachin.bhosale@securelayer7.net\",\n\t\"mobileNo\":\"9579685279\",\n\t\"organization\":\"5eda21d5a74f000006000312\",\n\t\"jobTitle\":\"CEO\",\n\t\"userRole\":\"admin\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/customer/adtoorganization",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"customer",
+								"adtoorganization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add billing info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"organization\":\"5f8aa66c54774a59f0656eaf\",\n  \"region\":\"5f85ab0c6379381ed24ddb58\",\n  \"billingCycle\":\"Monthly\",\n\t\"invoiceNo\":\"ABC123456\",\n\t\"customer\":[\"5f8aa68f31a485785a4f1f6a\"],\n\t\"plan\":\"5f85a2b1da0c1a07ac260203\"\n}\n"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/billinginfo/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"billinginfo",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NDA file upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fileName",
+									"value": ""
+								},
+								{
+									"key": "organization",
+									"value": "5f19252ac3ab4a5f13005b5e"
+								},
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ base_url  }}/savefile",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"savefile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NDA File Delete",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/deletefile/5f16e56cd93100009a006fb2",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"deletefile",
+								"5f16e56cd93100009a006fb2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Plan Attribute",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"system_name\":\"SCOPE\",\n\t\"display_name\":\"SCOPE\",\n\t\"type\":\"text\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/planattribute/create",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"planattribute",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Paln Attribute",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"system_name\":\"USER_LIMIT\",\n\t\"display_name\":\"USER_LIMIT\",\n\t\"type\":\"text\",\n\t\"status\":\"0\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/planattribute/5f1ec08aee320000ea0003e2",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"planattribute",
+								"5f1ec08aee320000ea0003e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Plan Attribute",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/planattributes",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"planattributes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Billing Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/billinginfos/5f7c72130f1f000022001f76",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"billinginfos",
+								"5f7c72130f1f000022001f76"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Billing info",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"billingCycle\":\"10\",\n\t\"invoiceNo\":\"ABC123456new\",\n\t\"plan\":\"5f85a2b1da0c1a07ac260203\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/billinginfo/5f7c72130f1f000022001f76",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"billinginfo",
+								"5f7c72130f1f000022001f76"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Sham\",\n\t\"lastName\":\"Varma\",\n\t\"email\":\"sham@yopmail.com\",\n\t\"token\":\"sample token\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/user/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Sachin\",\n\t\"lastName\":\"Bhosale\",\n\t\"email\":\"sachin.bhosale@securelayer7.net\",\n\t\"mobileNo\":\"1234567890\",\n\t\"token\":\"sample token\",\n\t\"role\":\"addmin\",\n\t\"jobtitle\":\"Developer\",\n\t\"timeZone\":\"Asia/Kolkata\",\n\t\"roles\":[\"5ef35695403700007e000a32\"],\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/user/5ed9e996226a0000bd001d53",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"user",
+								"5ed9e996226a0000bd001d53"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ base_url  }}/users/search?page=1&keyword=A",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"users",
+								"search"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "keyword",
+									"value": "A"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign IP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ip\":\"211:255:165:15\",\n\t\"type\":\"External\",\n\t\"status\":\"1\",\n\t\"user\":\"5ee351cbbc2a0000ab004e42\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/assignip/create",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"assignip",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Assign Ip",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/assignips?userId=5ee351cbbc2a0000ab004e42&page=1",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"assignips"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "5ee351cbbc2a0000ab004e42"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Assign IP",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ip\":\"211:255:165:13\",\n\t\"type\":\"External\",\n\t\"status\":\"1\",\n\t\"user\":\"5ee351cbbc2a0000ab004e42\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/assignip/5fe0b90af02f00007d004aa3",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"assignip",
+								"5fe0b90af02f00007d004aa3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "Add Project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdzz.io"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "projectTitle",
+									"value": "Test New Project"
+								},
+								{
+									"key": "client",
+									"value": "5eda2b64a74f000006000313"
+								},
+								{
+									"key": "startDate",
+									"value": "2020-07-24"
+								},
+								{
+									"key": "endDate",
+									"value": "2020-07-27"
+								},
+								{
+									"key": "fileName[]",
+									"value": ""
+								},
+								{
+									"key": "fileName[]",
+									"value": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ base_url  }}/project/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"project",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Phase",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer  {{ token  }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"test phase 19\",\n\t\"project\":\"6013ab9fde0b33205b4a10e4\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/phase/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"phase",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Phase",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"1st Phase\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/phase/5f11592ca852000047002682",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"phase",
+								"5f11592ca852000047002682"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Phases",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.io/"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/phases?projectid=6094e2145a58fa5eb359db96",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"phases"
+							],
+							"query": [
+								{
+									"key": "projectid",
+									"value": "6094e2145a58fa5eb359db96"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Project Module",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Model-new-test\",\n\t\"scopeid\":\"5faa8c91da7f000072005292\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/projectmodule/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"projectmodule",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project Module",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/projectmodules",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"projectmodules"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Project Module",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Model\",\n\t\"project\":\"5ef4a192ea1e000008000122\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/projectmodule/5f116ae0a852000047002689",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"projectmodule",
+								"5f116ae0a852000047002689"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Scope",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "1st Scope"
+								},
+								{
+									"key": "phase",
+									"value": "5f11592ca852000047002682"
+								},
+								{
+									"key": "engagementType",
+									"value": "5ef5bfd91e02000068001272"
+								},
+								{
+									"key": "testingMethod",
+									"value": "blackbox"
+								},
+								{
+									"key": "modules[]",
+									"value": "5f116ab2a852000047002688"
+								},
+								{
+									"key": "startDate",
+									"value": "2020-06-24"
+								},
+								{
+									"key": "endDate",
+									"value": "2020-06-28"
+								},
+								{
+									"key": "scopeDetails",
+									"value": "Test scope detaile"
+								},
+								{
+									"key": "scopeUrl",
+									"value": "5fa23b573b7c000013002832"
+								},
+								{
+									"key": "isAsvs",
+									"value": "1"
+								},
+								{
+									"key": "asvsScopeLevel",
+									"value": "level1"
+								},
+								{
+									"key": "project",
+									"value": "5fa14704db6d00004c0022d5"
+								},
+								{
+									"key": "fileName[]",
+									"value": ""
+								},
+								{
+									"key": "fileName[]",
+									"value": ""
+								},
+								{
+									"key": "modules[]",
+									"value": "5f116ae0a852000047002689"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ base_url  }}/scope/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"scope",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Scope",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.io"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/scopes",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"scopes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Scope",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\":\"Update Scope\",\n\t\"project\": \"5ef4a192ea1e000008000122\",\n\t\"phases\":[\"5ef5bfd91e02000068001272\"],\n\t\"enggementType\":\"5ef5bfd91e02000068001272\",\n\t\"testingMethod\":\"\",\n\t\"modules\":[\"5ef5fa441e02000068001273\"],\n\t\"startDate\":\"2020-06-24\",\n\t\"endDate\":\"2020-06-24\",\n\t\"scopeDetails\":\"Socpe the details\",\n\t\"isAsvs\":\"1\",\n\t\"asvsScopelevel\":\"2342423424652662636\"\t\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/scope/5f1171e6a85200004700268a",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"scope",
+								"5f1171e6a85200004700268a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Project Attribute",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"system_name\":\"TEST\",\n\t\"display_name\":\"Custome Test\",\n\t\"type\":\"select\",\n\t\"option\": {\"option1\":\"option1\",\"option2\":\"option2\"},\n\t\"page_no\":\"1\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/projectattribute/create",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"projectattribute",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project Attribute",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ base_url }}/projectattributes",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"projectattributes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Project Attribute",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"system_name\":\"TEST\",\n\t\"display_name\":\"Custome Test\",\n\t\"type\":\"select\",\n\t\"option\": {\"option1\":\"option1\",\"option2\":\"option2\"},\n\t\"page_no\":\"2\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/projectattribute/5f295e1b7d0100007d001ba3",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"projectattribute",
+								"5f295e1b7d0100007d001ba3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.io/"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/projects/",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"projects",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add scope URL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"url\":\"http://google.com\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/scopeurl/create",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"scopeurl",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Scope URL",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/scopeurls/5fa23b573b7c000013002832",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"scopeurls",
+								"5fa23b573b7c000013002832"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update scope url",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"url\":\"http://yahoo.com\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/scopeurl/5fa23b573b7c000013002832",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"scopeurl",
+								"5fa23b573b7c000013002832"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Project",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"step\":\"3\",\n\t\"status\":\"3\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/project/5fd2dbab98bfc560d160a8ed",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"project",
+								"5fd2dbab98bfc560d160a8ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Launch Project",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/project/launch/5ef4a192ea1e000008000122",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"project",
+								"launch",
+								"5ef4a192ea1e000008000122"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Engagement type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Test\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/engagementtype/create",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"engagementtype",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Engagement Type",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Pentest\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/engagementtype/5fbde2483f420000c0007652",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"engagementtype",
+								"5fbde2483f420000c0007652"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Engagement Type",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/engagementtypes/5fbde2483f420000c0007652",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"engagementtypes",
+								"5fbde2483f420000c0007652"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project File",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdzz.io/"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/projectfiles/606542eba1ff69370c52b047?step=scope",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"projectfiles",
+								"606542eba1ff69370c52b047"
+							],
+							"query": [
+								{
+									"key": "step",
+									"value": "scope"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add  Stackholder",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ _.token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.com/"
+							}
+						],
+						"url": {
+							"raw": "{{ _.base_url }}/stackholders?projectid=60ab9d1eb6cb943257548e11&page=1",
+							"host": [
+								"{{ _.base_url }}"
+							],
+							"path": [
+								"stackholders"
+							],
+							"query": [
+								{
+									"key": "projectid",
+									"value": "60ab9d1eb6cb943257548e11"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.com"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ _.token }}"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "{{ _.base_url }}/projects/search?page=1",
+							"host": [
+								"{{ _.base_url }}"
+							],
+							"path": [
+								"projects",
+								"search"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Templates",
+			"item": [
+				{
+					"name": "Add Email template",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"templateName\":\"Customer login\",\n\t\"template\":\"<html xmlns='http://www.w3.org/1999/xhtml'> <head> <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'> <meta content='width=mobile-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no' name='viewport'> <meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;'> <meta http-equiv='X-UA-Compatible' content='IE=9; IE=8; IE=7; IE=EDGE'> <meta content='#EEEEEE' name='sr bgcolor'> <title>SecureLayer7</title> <style type='text/css'> html, body { width: 100%; margin: 0; font-family: 'Lato', 'Arial', 'Calibri', sans-serif; } .ExternalClass { width: 100%; } .ReadMsgBody { width: 100%; } .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, ExternalClass td, . ExternalClass div { line-height: 100%; } table, td { border-collapse: collapse; margin: 0; mso-table-lspace: 0; mso-table-rspace: 0; padding: 0; } a { color: #0CB4CE; text-decoration: none; } a:hover { text-decoration: underline; opacity: 0.7; transition: all .25s ease-in-out; } @media only screen and (max-width: 800px) { table[class=container800] { width: 100% !important; } table[class=container800_img] { width: 50% !important; } table[class=half-container800] { width: 50% !important; }table[class=preheader] { width: 90% !important; }td[class=hide800] { display: none !important; } } @media only screen and (max-width: 640px) { table[class=full], table[class=container800] { width: 100% !important; }table[class=container800], table[class=container600], table[class=container590], table[class= container500] { width: 370px !important; }table[class=container186], table[class=container290], table[class=container200] { width: 320px !important; }table[class=container800_img], table[class=half-container800] { width: 100% !important; }table[class=half-container600], table[class=container120], td[class=container120] { width: 49% !important; } table[class=about180] { width: 250px !important; } table[class=container340] { width: 370px !important; } td[class=center] { text-align: center !important; vertical-align: middle !important; } img[class=img_scale], td[class=img_scale] { width: 100% !important; height: auto !important; } td[class=hide], br[class=hide] { display: none !important; } td[class=show] { display: block !important; } td[class=padding_10] { padding: 0 10px !important; } td[class=padding_20], td[class=padding_20_show] { padding: 0 20px !important; height: auto !important; }img[class=divider] { width: 100% !important; height: 1px !important; }td[class=mobile-width] { padding: 0 25% !important; }td[class=main-section-header], div[class=main-section-header] { font-size: 30px !important; line-height: 38px !important; }td[class=mobile_para] { font-size: 14px !important; line-height: 26px !important; } }@media only screen and (max-width:480px) { table[class=container800], table[class=full], table[class=container600], table[class=container590], table[class=container500] { width: 100% !important; height: auto !important; }table[class=container186], table[class=container290], table[class=container200] { width: 200px !important; }table[class=container800_img], table[class=half-container800], table[class=container120], td[class= container120] { width: 100% !important; }table[class=half-container600], table[class=container120], td[class=container120] { width: 49% !important; }table[class=container340] { width: 260px !important; }table[class=about180] { width: 140px !important; }td[class=center], td[class=align-center] { text-align: center !important; vertical-align: middle !important; }img[class=img_scale], td[class=img_scale] { width: 100% !important; height: auto !important; } td[class=hide], br[class=hide] { display: none !important; } td[class=show] { display: block !important; } td[class=padding_20], td[class=padding_20_show] { padding: 0 20px !important; } img[class=divider] { width: 100% !important; height: 1px !important; } td[class=main-section-header], div[class=main-section-header] { font-size: 26px !important; } td[class=mobile_para], div[class=mobile_para] { font-size: 14px !important; } } </style> </head> <body yahoo='fix' style='margin:0; padding:0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;'> <!-- Main Header --> <table border='0' width='100%' cellpadding='0' cellspacing='0' bgcolor='#EEEEEE' data-module='module2' data-thumb='thumbnails/module2.png' style='background-color: #EEEEEE;' data-bgcolor='Body bgcolor'> <tbody> <tr> <td align='center'> <table border='0' align='center' width='100%' style='width:100%;max-width: 800px;background-color: #0a83c1;background-repeat: no-repeat;background-position: top center;background-size: cover;' cellpadding='0' cellspacing='0' bgcolor='#0CB4CE' background='images/bg1.JPG' data-bg='Background1' data-bgcolor='Background1'> <tbody> <!-- Header Nav --> <tr> <td align='center' data-bgcolor='Nav Background' style='width:100%; max-width:800px; background-image: url(images/headerbg.png); background-position: top center; background-size: cover;' cellpadding='0' cellspacing='0' background='images/headerbg.png'> <table border='0' align='center' width='600' style='' cellpadding='0' cellspacing='0' class='container600'> <tbody> <tr> <td align='center'> <table border='0' align='left' width='380' cellpadding='0' cellspacing='0' style='border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;' class='container600'> <tbody> <tr> <td align='center'> <table border='0' cellpadding='0' cellspacing='0' align='left' class='container600'> <tbody> <tr></tr> </tbody> </table> </td> </tr> </tbody> </table> <table border='0' align='left' width='5' cellpadding='0' cellspacing='0' style='border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;' class='container600'> <tbody> <tr><td height='20' width='5' style='font-size: 20px; line-height: 20px;'>&nbsp;</td></tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> <!-- end section --> <!-- Main Hero --> <tr> <td align='center' class='padding_20_show'> <table border='0' align='center' width='600' cellpadding='0' cellspacing='0' class='container500' data-bgcolor='Hero Center'> <tbody><tr> <td align='center' mc:edit='big-title1' style='letter-spacing: 2px;font-size: 25px;color: #FFFFFF;font-weight: 700;line-height: 48px;font-family: 'Lato', 'Open Sans', sans-serif;text-transform: uppercase;' class='main-section-header' data-size='Header title' data-max='72' data-color='Header title'> <!-- ======= section text ====== --><div style='line-height: 140%;' class='main-section-header'> <span class='text_container'> <multiline> BUGDAZZ </multiline> </span> </div> </td> </tr> <tr> <td height='20' class='hide' style='font-size: 20px; line-height: 20px;'>&nbsp;</td> </tr> </tbody> </table> </td> </tr> <!-- end section --> </tbody> </table> </td> </tr> </tbody> </table> <!-- end section --> <!-- Headline Text --> <table border='0' width='100%' cellpadding='0' cellspacing='0' bgcolor='#FFFFFF' data-module='module4' data-thumb='thumbnails/module4.png' style='background-color: #EEEEEE;' data-bgcolor='Body bgcolor'> <tbody> <tr> <td align='center'> <table border='0' align='center' width='100%' style='background-color: #FFFFFF;width:100%;max-width: 800px;' cellpadding='0' cellspacing='0' data-bgcolor='White-Bg'> <tbody> <tr> <td align='center' class='padding_20_show'> <table border='0' align='center' width='600' cellpadding='0' cellspacing='0' class='container600'> <tbody style='font-size: 14px; font-family: 'Lato', 'Open Sans', sans-serif; line-height: 1.7em;'> <tr> <td colspan='2'> <!--<p style='font-size:18px; font-weight:600;'>Hi {First Name},</p>--><br> <p> Hi {Full_Name},<br> Thank you for logging in to the Bugdazz. Click on the below button to access your account. Remember that this email will not longer valid once you logged in successfully. </p> </td> </tr><tr><td height='40' style='font-size: 40px; line-height:40px;'></td></tr><tr> <td colspan='4' align='center'> <table> <tbody> <tr> <td align='center'> <table> <tbody> <tr> <td> <a target='_blank' href='{Link}' class='link2' style='background:#0a83c1; text-decoration: none; padding:10px 18px;-webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; color:#ffffff;'>Open Dashboard</a> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> <tr><td height='30'></td></tr> <tr> <td align='left'> <div class='contentEditableContainer contentTextEditable'> <div class='contentEditable'> <p> <br> Cheers,<br>Team Bugdazz. </p> </div> </div> </td> </tr> <tr><td height='20'></td></tr> </tbody> </table> </td> </tr> <tr><td height='20' style='font-size: 20px; line-height:20px;'></td></tr> </tbody> </table> </td> </tr> </tbody> </table> <!-- end section --> <!-- Join Team --> <table border='0' width='100%' cellpadding='0' cellspacing='0' bgcolor='#FFFFFF' data-module='module6' data-thumb='thumbnails/module6.png' style='background-color: #EEEEEE;' data-bgcolor='Body bgcolor'> <tbody> <tr> <td align='center' style=''> <table border='0' align='center' width='100%' style='width:100%;max-width: 800px;background-image: url(images/bg2.JPG);background-color: #F7F7F7;background-repeat: no-repeat;background-position: top center;background-size: cover;' bgcolor='#F7F7F7' background='images/bg2.JPG' cellpadding='0' cellspacing='0' data-bgcolor='White-Bg'> <tbody> <tr> <td align='center' class='padding_20_show'> <table border='0' align='center' width='600' bgcolor='#F7F7F7' cellpadding='0' cellspacing='0' class='full' data-bgcolor='Hero Center'> <tbody> <tr> <td align='center' class='padding_20_show'> <table align='center' width='600' bgcolor='#F7F7F7' cellpadding='0' cellspacing='0' class='container500' data-bgcolor='Hero Center'> <tbody> <tr><td height='30' style='font-size: 30px; line-height: 30px;'>&nbsp;</td></tr><tr> <td align='center' mc:edit='big-title1' style='color: #444444; font-size: 14px; text-align: justify; font-family: 'Lato', 'Open Sans', sans-serif; line-height: 28px;font-weight:400;' data-size='Header title' data-max='72' data-color='Header title'> <!-- ======= section text ====== --><div style='line-height: 190%;'> <span class='text_container'> <multiline> This email and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error please notify the system manager. This message contains confidential information and is intended only for the individual named. If you are not the named addressee you should not disseminate, distribute or copy this e-mail. Please notify the sender immediately by e-mail if you have received this e-mail by mistake and delete this e-mail from your system. If you are not the intended recipient you are notified that disclosing, copying, distributing or taking any action in reliance on the contents of this information is strictly prohibited. </multiline> </span> </div> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> <tr><td height='30' style='font-size: 30px; line-height: 30px;'>&nbsp;</td></tr> </tbody> </table> </td> </tr> </tbody> </table> <!-- end section --> <!-- Footer --> <table border='0' width='100%' cellpadding='0' cellspacing='0' bgcolor='#EEEEEE' data-module='module22' data-thumb='thumbnails/module22.png' style='background-color: #EEEEEE;' data-bgcolor='Body bgcolor'> <tbody> <tr> <td align='center'> <table border='0' align='center' width='100%' bgcolor='#516072' style='width:100%;max-width: 800px;background-color: #0a83c1;' cellpadding='0' cellspacing='0' class='' data-bgcolor='Footer-Bg'> <tbody> <tr> <td align='center' class='padding_20'> <table border='0' align='center' width='600' cellpadding='0' cellspacing='0' class='container590'> <tbody> <tr><td height='20' style='font-size: 30px; line-height: 20px;'>&nbsp;</td></tr><tr> <td align='center' mc:edit='unsubscribe-link' style='color: #ffffff;font-size: 14px;font-family: 'Lato', 'Arial', 'Calibri', sans-serif;line-height: 24px;font-weight: 500;' data-color='Footer Text' data-size='Footer Text' data-min='12' data-max='28'> <div class='editable_text' style='line-height: 24px;'> <span class='text_container'> <multiline> © 2020 SecureLayer7. All Rights Reserved </multiline> </span> </div> </td> </tr><tr><td height='20' style='font-size: 30px; line-height: 20px;'>&nbsp;</td></tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!-- end section --> </body> </html>\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/emailtemplate/create",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"emailtemplate",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Email template",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/emailtemplates",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"emailtemplates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Email template",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token  }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"templateName\":\"Customer login\",\n\t\"template\":\"<html xmlns='http://www.w3.org/1999/xhtml'> <head> <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'> <meta content='width=mobile-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no' name='viewport'> <meta name='viewport' content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;'> <meta http-equiv='X-UA-Compatible' content='IE=9; IE=8; IE=7; IE=EDGE'> <meta content='#EEEEEE' name='sr bgcolor'> <title>SecureLayer7</title> <style type='text/css'> html, body { width: 100%; margin: 0; font-family: 'Lato', 'Arial', 'Calibri', sans-serif; } .ExternalClass { width: 100%; } .ReadMsgBody { width: 100%; } .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, ExternalClass td, . ExternalClass div { line-height: 100%; } table, td { border-collapse: collapse; margin: 0; mso-table-lspace: 0; mso-table-rspace: 0; padding: 0; } a { color: #0CB4CE; text-decoration: none; } a:hover { text-decoration: underline; opacity: 0.7; transition: all .25s ease-in-out; } @media only screen and (max-width: 800px) { table[class=container800] { width: 100% !important; } table[class=container800_img] { width: 50% !important; } table[class=half-container800] { width: 50% !important; }table[class=preheader] { width: 90% !important; }td[class=hide800] { display: none !important; } } @media only screen and (max-width: 640px) { table[class=full], table[class=container800] { width: 100% !important; }table[class=container800], table[class=container600], table[class=container590], table[class= container500] { width: 370px !important; }table[class=container186], table[class=container290], table[class=container200] { width: 320px !important; }table[class=container800_img], table[class=half-container800] { width: 100% !important; }table[class=half-container600], table[class=container120], td[class=container120] { width: 49% !important; } table[class=about180] { width: 250px !important; } table[class=container340] { width: 370px !important; } td[class=center] { text-align: center !important; vertical-align: middle !important; } img[class=img_scale], td[class=img_scale] { width: 100% !important; height: auto !important; } td[class=hide], br[class=hide] { display: none !important; } td[class=show] { display: block !important; } td[class=padding_10] { padding: 0 10px !important; } td[class=padding_20], td[class=padding_20_show] { padding: 0 20px !important; height: auto !important; }img[class=divider] { width: 100% !important; height: 1px !important; }td[class=mobile-width] { padding: 0 25% !important; }td[class=main-section-header], div[class=main-section-header] { font-size: 30px !important; line-height: 38px !important; }td[class=mobile_para] { font-size: 14px !important; line-height: 26px !important; } }@media only screen and (max-width:480px) { table[class=container800], table[class=full], table[class=container600], table[class=container590], table[class=container500] { width: 100% !important; height: auto !important; }table[class=container186], table[class=container290], table[class=container200] { width: 200px !important; }table[class=container800_img], table[class=half-container800], table[class=container120], td[class= container120] { width: 100% !important; }table[class=half-container600], table[class=container120], td[class=container120] { width: 49% !important; }table[class=container340] { width: 260px !important; }table[class=about180] { width: 140px !important; }td[class=center], td[class=align-center] { text-align: center !important; vertical-align: middle !important; }img[class=img_scale], td[class=img_scale] { width: 100% !important; height: auto !important; } td[class=hide], br[class=hide] { display: none !important; } td[class=show] { display: block !important; } td[class=padding_20], td[class=padding_20_show] { padding: 0 20px !important; } img[class=divider] { width: 100% !important; height: 1px !important; } td[class=main-section-header], div[class=main-section-header] { font-size: 26px !important; } td[class=mobile_para], div[class=mobile_para] { font-size: 14px !important; } } </style> </head> <body yahoo='fix' style='margin:0; padding:0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;'> <!-- Main Header --> <table border='0' width='100%' cellpadding='0' cellspacing='0' bgcolor='#EEEEEE' data-module='module2' data-thumb='thumbnails/module2.png' style='background-color: #EEEEEE;' data-bgcolor='Body bgcolor'> <tbody> <tr> <td align='center'> <table border='0' align='center' width='100%' style='width:100%;max-width: 800px;background-color: #0a83c1;background-repeat: no-repeat;background-position: top center;background-size: cover;' cellpadding='0' cellspacing='0' bgcolor='#0CB4CE' background='images/bg1.JPG' data-bg='Background1' data-bgcolor='Background1'> <tbody> <!-- Header Nav --> <tr> <td align='center' data-bgcolor='Nav Background' style='width:100%; max-width:800px; background-image: url(images/headerbg.png); background-position: top center; background-size: cover;' cellpadding='0' cellspacing='0' background='images/headerbg.png'> <table border='0' align='center' width='600' style='' cellpadding='0' cellspacing='0' class='container600'> <tbody> <tr> <td align='center'> <table border='0' align='left' width='380' cellpadding='0' cellspacing='0' style='border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;' class='container600'> <tbody> <tr> <td align='center'> <table border='0' cellpadding='0' cellspacing='0' align='left' class='container600'> <tbody> <tr></tr> </tbody> </table> </td> </tr> </tbody> </table> <table border='0' align='left' width='5' cellpadding='0' cellspacing='0' style='border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;' class='container600'> <tbody> <tr><td height='20' width='5' style='font-size: 20px; line-height: 20px;'>&nbsp;</td></tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> <!-- end section --> <!-- Main Hero --> <tr> <td align='center' class='padding_20_show'> <table border='0' align='center' width='600' cellpadding='0' cellspacing='0' class='container500' data-bgcolor='Hero Center'> <tbody><tr> <td align='center' mc:edit='big-title1' style='letter-spacing: 2px;font-size: 25px;color: #FFFFFF;font-weight: 700;line-height: 48px;font-family: 'Lato', 'Open Sans', sans-serif;text-transform: uppercase;' class='main-section-header' data-size='Header title' data-max='72' data-color='Header title'> <!-- ======= section text ====== --><div style='line-height: 140%;' class='main-section-header'> <span class='text_container'> <multiline> BUGDAZZ </multiline> </span> </div> </td> </tr> <tr> <td height='20' class='hide' style='font-size: 20px; line-height: 20px;'>&nbsp;</td> </tr> </tbody> </table> </td> </tr> <!-- end section --> </tbody> </table> </td> </tr> </tbody> </table> <!-- end section --> <!-- Headline Text --> <table border='0' width='100%' cellpadding='0' cellspacing='0' bgcolor='#FFFFFF' data-module='module4' data-thumb='thumbnails/module4.png' style='background-color: #EEEEEE;' data-bgcolor='Body bgcolor'> <tbody> <tr> <td align='center'> <table border='0' align='center' width='100%' style='background-color: #FFFFFF;width:100%;max-width: 800px;' cellpadding='0' cellspacing='0' data-bgcolor='White-Bg'> <tbody> <tr> <td align='center' class='padding_20_show'> <table border='0' align='center' width='600' cellpadding='0' cellspacing='0' class='container600'> <tbody style='font-size: 14px; font-family: 'Lato', 'Open Sans', sans-serif; line-height: 1.7em;'> <tr> <td colspan='2'> <!--<p style='font-size:18px; font-weight:600;'>Hi {First Name},</p>--><br> <p> Hi {Full_Name},<br> Thank you for logging in to the Bugdazz. Click on the below button to access your account. Remember that this email will not longer valid once you logged in successfully. </p> </td> </tr><tr><td height='40' style='font-size: 40px; line-height:40px;'></td></tr><tr> <td colspan='4' align='center'> <table> <tbody> <tr> <td align='center'> <table> <tbody> <tr> <td> <a target='_blank' href='{Link}' class='link2' style='background:#0a83c1; text-decoration: none; padding:10px 18px;-webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; color:#ffffff;'>Open Dashboard</a> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> <tr><td height='30'></td></tr> <tr> <td align='left'> <div class='contentEditableContainer contentTextEditable'> <div class='contentEditable'> <p> <br> Cheers,<br>Team Bugdazz. </p> </div> </div> </td> </tr> <tr><td height='20'></td></tr> </tbody> </table> </td> </tr> <tr><td height='20' style='font-size: 20px; line-height:20px;'></td></tr> </tbody> </table> </td> </tr> </tbody> </table> <!-- end section --> <!-- Join Team --> <table border='0' width='100%' cellpadding='0' cellspacing='0' bgcolor='#FFFFFF' data-module='module6' data-thumb='thumbnails/module6.png' style='background-color: #EEEEEE;' data-bgcolor='Body bgcolor'> <tbody> <tr> <td align='center' style=''> <table border='0' align='center' width='100%' style='width:100%;max-width: 800px;background-image: url(images/bg2.JPG);background-color: #F7F7F7;background-repeat: no-repeat;background-position: top center;background-size: cover;' bgcolor='#F7F7F7' background='images/bg2.JPG' cellpadding='0' cellspacing='0' data-bgcolor='White-Bg'> <tbody> <tr> <td align='center' class='padding_20_show'> <table border='0' align='center' width='600' bgcolor='#F7F7F7' cellpadding='0' cellspacing='0' class='full' data-bgcolor='Hero Center'> <tbody> <tr> <td align='center' class='padding_20_show'> <table align='center' width='600' bgcolor='#F7F7F7' cellpadding='0' cellspacing='0' class='container500' data-bgcolor='Hero Center'> <tbody> <tr><td height='30' style='font-size: 30px; line-height: 30px;'>&nbsp;</td></tr><tr> <td align='center' mc:edit='big-title1' style='color: #444444; font-size: 14px; text-align: justify; font-family: 'Lato', 'Open Sans', sans-serif; line-height: 28px;font-weight:400;' data-size='Header title' data-max='72' data-color='Header title'> <!-- ======= section text ====== --><div style='line-height: 190%;'> <span class='text_container'> <multiline> This email and any files transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error please notify the system manager. This message contains confidential information and is intended only for the individual named. If you are not the named addressee you should not disseminate, distribute or copy this e-mail. Please notify the sender immediately by e-mail if you have received this e-mail by mistake and delete this e-mail from your system. If you are not the intended recipient you are notified that disclosing, copying, distributing or taking any action in reliance on the contents of this information is strictly prohibited. </multiline> </span> </div> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> <tr><td height='30' style='font-size: 30px; line-height: 30px;'>&nbsp;</td></tr> </tbody> </table> </td> </tr> </tbody> </table> <!-- end section --> <!-- Footer --> <table border='0' width='100%' cellpadding='0' cellspacing='0' bgcolor='#EEEEEE' data-module='module22' data-thumb='thumbnails/module22.png' style='background-color: #EEEEEE;' data-bgcolor='Body bgcolor'> <tbody> <tr> <td align='center'> <table border='0' align='center' width='100%' bgcolor='#516072' style='width:100%;max-width: 800px;background-color: #0a83c1;' cellpadding='0' cellspacing='0' class='' data-bgcolor='Footer-Bg'> <tbody> <tr> <td align='center' class='padding_20'> <table border='0' align='center' width='600' cellpadding='0' cellspacing='0' class='container590'> <tbody> <tr><td height='20' style='font-size: 30px; line-height: 20px;'>&nbsp;</td></tr><tr> <td align='center' mc:edit='unsubscribe-link' style='color: #ffffff;font-size: 14px;font-family: 'Lato', 'Arial', 'Calibri', sans-serif;line-height: 24px;font-weight: 500;' data-color='Footer Text' data-size='Footer Text' data-min='12' data-max='28'> <div class='editable_text' style='line-height: 24px;'> <span class='text_container'> <multiline> © 2020 SecureLayer7. All Rights Reserved </multiline> </span> </div> </td> </tr><tr><td height='20' style='font-size: 30px; line-height: 20px;'>&nbsp;</td></tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!-- end section --> </body> </html>\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url  }}/emailtemplate/5efef175757000004c007642",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"emailtemplate",
+								"5efef175757000004c007642"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subscriber",
+			"item": [
+				{
+					"name": "Add organization",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://bhushan.bugdazz.com/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"sachin.ph11@yopmail.com\",\n\t\"name\":\"sbidemo\",\n\t\"alias\":\"yopmail\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/organization/create",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"organization",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Organization",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"google\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/organization/5f22a65af81f0000d00073e2",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"organization",
+								"5f22a65af81f0000d00073e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Organization",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://microsoft.bugdazz.com/"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/organizations?page=1",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"organizations"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Vendor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Anna\",\n\t\"lastName\":\"Pol\",\n\t\"email\":\"anna.p@yopmail.com\",\n\t\"mobileNo\":\"122345678\",\n\t\"organization\":\"5ece6ec7be0b00001c001e92\",\n\t\"role\":\"5f22a65af81f0000d00073e2\",\n\t\"designation\":\"BSC\",\n\t\"mobileExt\":\"+91\"\n\t\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/customer/create",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"customer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vendor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Lalit\",\n\t\"lastName\":\"Dusan\",\n\t\"email\":\"lalit.d@yopmail.com\",\n\t\"mobileNo\":\"122345678\",\n\t\"organization\":\"5ece6ec7be0b00001c001e92\",\n\t\"role\":\"5f22a65af81f0000d00073e2\",\n\t\"status\":\"1\",\n\t\"mobileExt\":\"+91\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/customer/5f22bdbff81f0000d00073e3",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"customer",
+								"5f22bdbff81f0000d00073e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vendor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/customers?page=3",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invite Vendor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"vendor\":[\"5f22bdbff81f0000d00073e3\"]\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/invite/vendor",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"invite",
+								"vendor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Vendor Invite",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"token\":\"$2y$10$UkaQwVp4e2Y1HUuuODyR6upFkWIC89GaR6s5ccVT2qI9z1wVyu.mC\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/invite/accept",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"invite",
+								"accept"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign resource",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"phase\":\"5faa8ea0da7f000072005295\",\n\t\"resource\":\"5eda4b6da74f00000600033a\",\n\t\"project\":\"5fa14704db6d00004c0022d5\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/assignresource/create",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"assignresource",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Assign resource",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/assignresources?projectid=5fc2373a98bfc560d160a832&page=1",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"assignresources"
+							],
+							"query": [
+								{
+									"key": "projectid",
+									"value": "5fc2373a98bfc560d160a832"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "User Search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"keyword\":\"bhos\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/customers/search",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"customers",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Global Search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "beare {{ token }}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"keyword\":\"test\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/search",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vulnerability",
+			"item": [
+				{
+					"name": "Add Vulnerability",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.com/"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"project\":\"603c9d0ab6cbdc5eba79d491\",\n\t\"title\":\"Attack Scenario: An attacker that has identified this\",\n\t\"asset\":\"6045dcf0ea8ae3242b433d5a\",\n\t\"affectedModule\": [\"603c9d3b49282423884eee81\",\"60685ac11b194a68181aec70\"],\n\t\"step\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/vulnerability/create",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"vulnerability",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vulnerability",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.io"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"severity\":\"cssd-sdhsahjdadads-234hbsbdf87-34y2sfsd-w4sefsjh\",\n\t\"vulnerabilityDesc\":\"test descriptionsa\",\n\t\"secuirityImpact\":\"Security impact\",\n\t\"workaround\":\"Work around\",\n\t\"toolUsed\":\"tool used\",\n\t\"ticketCat\":\"9827441209uquequ0\",\n\t\"proofDetail\":\"proof details\",\n\t\"requestDump\":\"request dump\",\n\t\"status\":\"1\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/vulnerability/5ef4a192ea1e000008000122",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"vulnerability",
+								"5ef4a192ea1e000008000122"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vulnerability",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.com/"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/vulnerabilitys/608bb21505de5318db7faca9",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"vulnerabilitys",
+								"608bb21505de5318db7faca9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vunerability 4th step",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.io"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"toolUsed\":\"tools used\",\n\t\"ticketCat\":\"ticket cat\",\n\t\"proofDetail\":\"proof details\",\n\t\"requestDump\":\"request Dump\",\n\t\"step\":\"4\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/vulnerability/5fb8ab7e6817000056004e34",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"vulnerability",
+								"5fb8ab7e6817000056004e34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Updte Vulnerability 2nd Step",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cvss\":\"3.0#CVSS:3.0/AV:P/APC:L/PR:H/UI/S/C:K\",\n\t\"severity\":\"Low\",\n\t\"step\":\"2\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/vulnerability/5fb917a0acb7aa2625716eb4",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"vulnerability",
+								"5fb917a0acb7aa2625716eb4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vulnerability 3rd Step",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"vulnerabilityDesc\":\"Description\",\n\t\"secuirityImpact\":\"secuirity Impact\",\n\t\"workaround\":\"work around\",\n\t\"step\":\"3\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/vulnerability/5fb8ab7e6817000056004e34",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"vulnerability",
+								"5fb8ab7e6817000056004e34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vulenarability proof file upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vulenrability",
+									"value": "5fb8ab7e6817000056004e34"
+								},
+								{
+									"key": "docs[]",
+									"value": ""
+								},
+								{
+									"key": "docs[]",
+									"value": ""
+								}
+							]
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Vulenarability",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.com"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "docs[]",
+									"value": ""
+								},
+								{
+									"key": "docs[]",
+									"value": ""
+								},
+								{
+									"key": "vulnerability",
+									"value": "5fb8ab7e6817000056004e34"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ base_url }}/vulnerabilityfile/create",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"vulnerabilityfile",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vulnerability Report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.io/"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/vulnerability/report/608e3f0e6bed1b4dd12700ab?phid=608e3f15b75cff56222595d0",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"vulnerability",
+								"report",
+								"608e3f0e6bed1b4dd12700ab"
+							],
+							"query": [
+								{
+									"key": "phid",
+									"value": "608e3f15b75cff56222595d0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vulnerability Report Node",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://internal.bugdazz.io/"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8001/report",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vulnerability file download",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/downloadvulndoc/5ffdb26078779a087f0311c2",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"downloadvulndoc",
+								"5ffdb26078779a087f0311c2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vulnerability file edit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"tag\":\"kasbkhasb d,jasdhkha,ansdjk n',asdasdasd\"}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/vulnerabilityfile/5ffc5630de0b33205b4a1096",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"vulnerabilityfile",
+								"5ffc5630de0b33205b4a1096"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\":\"Shivaji\",\n\t\"lastName\":\"Bhosale\",\n\t\"email\":\"sachin.b@yopmail.com\",\n\t\"mobileNo\":\"9579685279\"\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/profile",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ckeditor file",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://temp.bugdazz.io"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ base_url }}/saveckfile",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"saveckfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download ckeditor file",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://internal.bugdazz.io"
+							},
+							{
+								"key": "",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/getckfile?fileName=penetration-testing-vendors-india-Copy_20210123104250.png&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbmV4dXMuYnVnZGF6ei5pb1wvY3VzdG9tZXJcL2FwaVwvdjFcL2xvZ2ludmVyaWZ5IiwiaWF0IjoxNjExOTgzOTQ4LCJleHAiOjE2MTE5ODc1NDgsIm5iZiI6MTYxMTk4Mzk0OCwianRpIjoiQnkxT2RFSVFRaE96Nm1UdyIsInN1YiI6IjVmZWQ2MjZmNjVhZjU2MTlhYTFhOTdjYSIsInBydiI6IjhiNDIyZTZmNjU3OTMyYjhhZWJjYjFiZjFlMzU2ZGQ3NmEzNjViZjIifQ.ORMWkDwwpVoG7T3QuLIAABZAWcFOge_8AOY86cXMXAQ",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"getckfile"
+							],
+							"query": [
+								{
+									"key": "fileName",
+									"value": "penetration-testing-vendors-india-Copy_20210123104250.png"
+								},
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbmV4dXMuYnVnZGF6ei5pb1wvY3VzdG9tZXJcL2FwaVwvdjFcL2xvZ2ludmVyaWZ5IiwiaWF0IjoxNjExOTgzOTQ4LCJleHAiOjE2MTE5ODc1NDgsIm5iZiI6MTYxMTk4Mzk0OCwianRpIjoiQnkxT2RFSVFRaE96Nm1UdyIsInN1YiI6IjVmZWQ2MjZmNjVhZjU2MTlhYTFhOTdjYSIsInBydiI6IjhiNDIyZTZmNjU3OTMyYjhhZWJjYjFiZjFlMzU2ZGQ3NmEzNjViZjIifQ.ORMWkDwwpVoG7T3QuLIAABZAWcFOge_8AOY86cXMXAQ"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vulnerability  Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://yopmail.bugdazz.com/"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url }}/vulnerabilitys/search?page=1&reported_by=anudeep&phaseid=608e3f15b75cff56222595d0",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"vulnerabilitys",
+								"search"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "reported_by",
+									"value": "anudeep"
+								},
+								{
+									"key": "phaseid",
+									"value": "608e3f15b75cff56222595d0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Weaknes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"weakness_category\":\"\",\n\t\"weakness_sub_category\":\"\",\n\t\"weakness_title\":\"\",\n\t\"weakness_url\":\"\"\t\n}"
+						},
+						"url": {
+							"raw": "{{ base_url }}/weaknes/create",
+							"host": [
+								"{{ base_url }}"
+							],
+							"path": [
+								"weaknes",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vulnerability indivisual phase wise report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "berear {{ _.token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.com"
+							}
+						],
+						"url": {
+							"raw": "{{ _.base_url }}/vulnerability/phasereport/608e3f0e6bed1b4dd12700ab?phid=608e3f15b75cff56222595d0",
+							"host": [
+								"{{ _.base_url }}"
+							],
+							"path": [
+								"vulnerability",
+								"phasereport",
+								"608e3f0e6bed1b4dd12700ab"
+							],
+							"query": [
+								{
+									"key": "phid",
+									"value": "608e3f15b75cff56222595d0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stackholder",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "barere {{ _.token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.buggdazz.com"
+							}
+						],
+						"url": {
+							"raw": "{{ base_url  }}/stackholders?projectid=609a25fd68dfed4d877d95f6&page=1",
+							"host": [
+								"{{ base_url  }}"
+							],
+							"path": [
+								"stackholders"
+							],
+							"query": [
+								{
+									"key": "projectid",
+									"value": "609a25fd68dfed4d877d95f6"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vulnerability State",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer {{ _.token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.com/"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "status",
+									"value": "12"
+								},
+								{
+									"key": "reson",
+									"value": "test reson"
+								},
+								{
+									"key": "fileName[]",
+									"value": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ _.base_url }}/vulnerability/state/608e7ea525080860d565bf7e",
+							"host": [
+								"{{ _.base_url }}"
+							],
+							"path": [
+								"vulnerability",
+								"state",
+								"608e7ea525080860d565bf7e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JIra Intigration",
+			"item": [
+				{
+					"name": "Jira Auth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Jira Project List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://bdstage.atlassian.net/rest/api/3/project",
+							"protocol": "https",
+							"host": [
+								"bdstage",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JIra Create Project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JIRA PULL data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ _.token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.com/"
+							}
+						],
+						"url": {
+							"raw": "{{ _.base_url }}/jirapull",
+							"host": [
+								"{{ _.base_url }}"
+							],
+							"path": [
+								"jirapull"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JIRA All Filed list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ _.token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://securelayer7.bugdazz.com"
+							}
+						],
+						"url": {
+							"raw": "{{ _.base_url }}/jirafields",
+							"host": [
+								"{{ _.base_url }}"
+							],
+							"path": [
+								"jirafields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JIRA Dropdown options",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer {{ _.token }}"
+							},
+							{
+								"key": "Origin",
+								"value": "https://testingarisg.bugdazz.com"
+							}
+						],
+						"url": {
+							"raw": "{{ _.base_url }}/jira/options/AR",
+							"host": [
+								"{{ _.base_url }}"
+							],
+							"path": [
+								"jira",
+								"options",
+								"AR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update JIRA account",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbmV4dXMuYnVnZGF6ei5jb21cL2N1c3RvbWVydjJcL2FwaVwvdjFcL2xvZ2ludmVyaWZ5IiwiaWF0IjoxNjMxNzcyOTQ3LCJleHAiOjE2MzE4MDE3NDcsIm5iZiI6MTYzMTc3Mjk0NywianRpIjoiU1RnTHcwUVMzSzhVMUVVNyIsInN1YiI6IjYxMTM2NDNiN2RjZTNkMGM5NzIwMTMyYiIsInBydiI6IjhiNDIyZTZmNjU3OTMyYjhhZWJjYjFiZjFlMzU2ZGQ3NmEzNjViZjIifQ.yMCYiBw9Eoaof9AJexWKDHB-s4Z82qBt6tPXfY26Yj0"
+							},
+							{
+								"key": "Origin",
+								"value": "https://bugdazzstage.bugdazz.com/"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"host\": \"http://103.81.38.244:8080\", \n\t\"token\": \"pushkar@123\", \n\t\"username\": \"pushkar\", \n\t\"isPasswordAuth\": \"1\"\n}"
+						},
+						"url": {
+							"raw": "https://nexus.bugdazz.com/customerv2/api/v1/jiraconfig/61309ab4e51172781f235b94",
+							"protocol": "https",
+							"host": [
+								"nexus",
+								"bugdazz",
+								"com"
+							],
+							"path": [
+								"customerv2",
+								"api",
+								"v1",
+								"jiraconfig",
+								"61309ab4e51172781f235b94"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test mail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{ base_url  }}/register",
+					"host": [
+						"{{ base_url  }}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check version",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ base_url }}/test",
+					"host": [
+						"{{ base_url }}"
+					],
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Timezone list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer {{ token }}"
+					},
+					{
+						"key": "",
+						"value": ""
+					}
+				],
+				"url": {
+					"raw": "{{ base_url }}/timezones",
+					"host": [
+						"{{ base_url }}"
+					],
+					"path": [
+						"timezones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://securelayer7.bugdazz.com"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer {{ _.token }}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{ _.base_url }}/jirapull",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"jirapull"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Phase wise csv report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer {{ _.token }}"
+					},
+					{
+						"key": "Origin",
+						"value": "https://bhushan.bugdazz.com"
+					}
+				],
+				"url": {
+					"raw": "https://nexus.bugdazz.com/customer/api/v1/finding/exportcsv/603c9d1899dff841056ef10f",
+					"protocol": "https",
+					"host": [
+						"nexus",
+						"bugdazz",
+						"com"
+					],
+					"path": [
+						"customer",
+						"api",
+						"v1",
+						"finding",
+						"exportcsv",
+						"603c9d1899dff841056ef10f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Copy POC",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer {{ _.token }}"
+					},
+					{
+						"key": "Origin",
+						"value": "https://securelayer7.bugdazz.com"
+					}
+				],
+				"url": {
+					"raw": "{{ _.base_url }}/copyvulndoc/6052dc915ae7d9703e1893c8",
+					"host": [
+						"{{ _.base_url }}"
+					],
+					"path": [
+						"copyvulndoc",
+						"6052dc915ae7d9703e1893c8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "temp",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL25leHVzLmJ1Z2RhenouaW8vY3VzdG9tZXIvYXBpL3YxL3NpZ25pbiIsImlhdCI6MTY5NTc4Njg0NCwiZXhwIjoxNjk1ODE1NjQ0LCJuYmYiOjE2OTU3ODY4NDQsImp0aSI6InlWWVdJd2o5SUhidFZxTEgiLCJzdWIiOiI2MTQxOTU5NGI5YjMzYTFhYWEwNzg4MWIiLCJwcnYiOiI4YjQyMmU2ZjY1NzkzMmI4YWViY2IxYmYxZTM1NmRkNzZhMzY1YmYyIn0.hpkRkR4VW-H39bmyfCSmIakmxp1MQ_5rNu7KpTolO9uw863jcSBqHPHqZ7ISr5xZDNyk23kdR_zdPW8s8efTX6WTjBL0iUBUEHNS8Tfg4HW3_QEdKsvejE1Kmmb6IOQgAOMRVOKsTQEy3EopMWB5bmjCitlsj_kTg1bgSR9_LBfVHLfhVTyb5Kn6D3U4r44ioBsETThRkywHOmTHOTjNmtWauDHo_hTXgM5dYsXq4N4z5tqKLqcHaUlz72U2EHnZzWO5Cec15IjONx3GHvCfluyUKOvXcNkmSU-70SEqgsZQou3-1kJ9jcNAa_KGLC4rjkta4PpjdnxBEoLY998pClja68nmxSSNyNSMPKMKp3IPsxhI5e7mhleAZXzWjDTpE8Xqb8Y8fZaCPHIPDPpBpAzYKWLAlTtcSFGsbQejp-fz_hKVVhe4QkUPon2Re7T7ootlvfzgrFtrwwQXaVGRUXzAxxtEpOjTfjFmAhogP5ru53cuflSCtwR4cORLzSQU9BGuH_tRnaM5TFU3GWPTxMuOVEwo6apEmMFDcni45LGJOqd9wjB3NuRnWBOj4CCDB_-FtpE-h0a3B0HLW62PzZAgB8l7FdUTYEBAPH9NKC1Xnuo7KJXCdV2OdFmURmtMvrkjEqIUYtilg_K4lOVPc7ibwT_8WNCHe69f6Cwnlps"
+					},
+					{
+						"key": "Origin",
+						"value": "https://securelayer7.bugdazz.io"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "",
+						"value": ""
+					}
+				],
+				"url": {
+					"raw": "https://nexus.bugdazz.io/customer/api/v1/scriptforowasptoptendata",
+					"protocol": "https",
+					"host": [
+						"nexus",
+						"bugdazz",
+						"io"
+					],
+					"path": [
+						"customer",
+						"api",
+						"v1",
+						"scriptforowasptoptendata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tepm2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL25leHVzLmJ1Z2RhenouaW8vY3VzdG9tZXIvYXBpL3YxL3NpZ25pbiIsImlhdCI6MTY5MjI3ODcyMiwiZXhwIjoxNjkyMzA3NTIyLCJuYmYiOjE2OTIyNzg3MjIsImp0aSI6ImtaaW1mR2l5OEwyV2YzZHciLCJzdWIiOiI2MTQxOTU5NGI5YjMzYTFhYWEwNzg4MWIiLCJwcnYiOiI4YjQyMmU2ZjY1NzkzMmI4YWViY2IxYmYxZTM1NmRkNzZhMzY1YmYyIn0.WMOnNNc9hB1Bek-DccGXXYTo1YJHJOVEN67-6d6OFU8HcrMO08ANOrvClRbncbRW8P0EsX1Af-tGGDgR7BDSqDxMfb8rwjK6I4k2EMycVvfHrdeKeFDcYfBhS1wzOnihVFvNAww9SkqR0iP_LcXPmlhb8wgOm2dWP-UE3j7trhjgXvvIzS5Dz-a6XqIvxBXSHqdjWGdwebF9GExmnhRMzk6eJSX9Ub2F0pz2C1gkwqaeSVXh2lHjTvuMDeUYdT7nszDVUBTLj9ZgAsMdRHcpahZz2MS4iGzh54AuLEiMvz-qq1_zLmIhiCPLGjvU1DWe24FlC5Qy10ey-B6MSEBtneiaLehlIfbmxuxmCcgoxD_-cdCLEAFrVQ2fbh6uDwMlx416m8gsAajo0PwMxpbg2fK9-IWMC3Fplp8Xz8QKe5eiUHqLzqFAm89MzOFCWqAct1NRwHEd_PnCyBtNwI6eFslz465kKlt8vTHo1NJZnKbR3nweDBzU7kA-7vL6ZckhaWREONwR5qC4ajp5umUwvtc87w--NuFd-cpLI1txcYW9syYh-WHftEsPQuMzS_CNMRItIt90VS5IQMNhnej1Uuw35Emiz0zVrKRC4Cg1HlAac1HvjWybUvxiB7hgcxs4E7RjnHfTBrwEavcixypzoHsRQrJ0lztBylOC-TdPKq8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://master.bugdazz.com"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://nexus.bugdazz.com/uat-master-public/api/v1/checkalias",
+					"protocol": "https",
+					"host": [
+						"nexus",
+						"bugdazz",
+						"com"
+					],
+					"path": [
+						"uat-master-public",
+						"api",
+						"v1",
+						"checkalias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJzZWN1cmVMYXllcjciLCJleHAiOjE2OTg3ODYwNzksImlzcyI6InRydXN0ZWQiLCJuYW1lIjoid2VibWFzdGVyQHNlY3VyZWxheWVyNy5uZXQiLCJzdWIiOiJzY2FuIn0.nPftJUdEPnVREX63AV82_pMWspEd5-DtL-t-KOG4F98"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Origin",
+						"value": "https://bugdazzstage.bugdazz.com"
+					},
+					{
+						"key": "Referer",
+						"value": "https://bugdazzstage.bugdazz.com/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "^\\^Chromium^^;v=^\\^112^^, ^\\^Google"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "^\\^Windows^^"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/v1/logout?phid=64788b0692a65e5e490fe9d2&action=download&pentestReportId=undefined",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"v1",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "phid",
+							"value": "64788b0692a65e5e490fe9d2"
+						},
+						{
+							"key": "action",
+							"value": "download"
+						},
+						{
+							"key": "pentestReportId",
+							"value": "undefined"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
