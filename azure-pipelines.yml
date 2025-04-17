@@ -1,0 +1,70 @@
+name: Security Scan
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    env:
+      securityScanApi: https://9784-45-252-74-134.ngrok-free.app/v1/startSecurityScan
+      projectId: 7e3e0c7a-322c-4f39-988e-9f2bcb84ab10
+      integrationId: 168d9de8-2409-44ab-8ded-4ceab4eec4ec
+      blockPipeline: false
+      blockCritical: false
+      blockHigh: false
+      blockMedium: false
+      criticalThreshold: 0
+      highThreshold: 0
+      mediumThreshold: 0
+    steps:
+      - name: Run Security Scan
+        run: |
+          echo "Running Security Scan..."
+
+          response=$(curl -s -X POST "$securityScanApi/$projectId" \
+            -H "Content-Type: application/json" \
+            -H "Api-Key: $integrationId")
+
+          echo "Raw response: $response"
+
+          if [[ "$response" == *'"message":"token expired"'* ]]; then
+            echo "Token expired. Failing the pipeline."
+            exit 1
+          fi
+
+          critical=$(echo "$response" | grep -o '"criticalCount":[0-9]*' | cut -d':' -f2)
+          high=$(echo "$response" | grep -o '"highCount":[0-9]*' | cut -d':' -f2)
+          medium=$(echo "$response" | grep -o '"mediumCount":[0-9]*' | cut -d':' -f2)
+
+          echo "Critical vulnerabilities: $critical"
+          echo "High vulnerabilities: $high"
+          echo "Medium vulnerabilities: $medium"
+
+          if [[ "$blockPipeline" == "true" ]]; then
+            if [[ "$blockCritical" == "true" && "$critical" -ge "$criticalThreshold" ]]; then
+              echo "Blocking: Critical threshold exceeded"
+              exit 1
+            fi
+            if [[ "$blockHigh" == "true" && "$high" -ge "$highThreshold" ]]; then
+              echo "Blocking: High threshold exceeded"
+              exit 1
+            fi
+            if [[ "$blockMedium" == "true" && "$medium" -ge "$mediumThreshold" ]]; then
+              echo "Blocking: Medium threshold exceeded"
+              exit 1
+            fi
+            echo "No thresholds exceeded. Proceeding."
+          else
+            echo "Blocking disabled. Proceeding regardless of severity."
+          fi
+
+  post-processing:
+    needs: security-scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post Cleanup
+        run: echo "Post-processing stage complete."
+	
